@@ -8,8 +8,6 @@ interface Teacher {
   [key: string]: any;
 }
 
-
-
 const teacher1: Teacher = {
   firstName: "John",
   fullTimeEmployee: false,
@@ -19,19 +17,26 @@ const teacher1: Teacher = {
   contract: false,
 };
 
-console.log(teacher1)
+console.log(teacher1);
 
 interface Director extends Teacher {
-  numberOfReports: number,
-  
+  numberOfReports: number;
 }
 
 const director1: Director = {
-  firstName: 'John',
-  lastName: 'Doe',
-  location: 'London',
+  firstName: "John",
+  lastName: "Doe",
+  location: "London",
   fullTimeEmployee: true,
   contract: false,
   numberOfReports: 17,
 };
 console.log(director1);
+
+function printTeacher(firstName: string, lastName: string): string {
+  return `${firstName.charAt(0)}. ${lastName}`;
+}
+
+interface printTeacherFunction {
+  (firstName: string, lastName: string): string;
+}
