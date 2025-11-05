@@ -33,10 +33,11 @@ const director1: Director = {
 };
 console.log(director1);
 
-function printTeacher(firstName: string, lastName: string): string {
-  return `${firstName.charAt(0)}. ${lastName}`;
-}
 
 interface printTeacherFunction {
-  (firstName: string, lastName: string): string;
+  ({firstName, lastName}: Teacher): string;
+}
+
+const printTeacher: printTeacherFunction = ({firstName, lastName}) => {
+  return `${firstName.charAt(0)}. ${lastName}`;
 }
