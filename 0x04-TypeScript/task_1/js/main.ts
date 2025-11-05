@@ -22,7 +22,7 @@ const teacher1: Teacher = {
 console.log(teacher1)
 
 interface Directors extends Teacher {
-  numberOfReports: 17,
+  numberOfReports: number,
   
 }
 
