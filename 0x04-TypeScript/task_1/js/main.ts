@@ -59,11 +59,11 @@ interface StudentConstructor {
   new (firstName: string, lastName: string): StudentInterface;
 }
 
-interface StudentInterface {
+interface StudentClassInterface {
   workOnHomework(): string;
   displayName(): string;
 }
-class StudentClass implements StudentInterface {
+class StudentClass implements StudentClassInterface {
   firstName: string;
   lastName: string;
 
