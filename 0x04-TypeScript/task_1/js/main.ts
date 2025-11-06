@@ -56,7 +56,7 @@ function printTeacher({
 }
 
 interface StudentConstructor {
-  new (firstName: string, lastName: string): StudentInterface;
+  new (firstName: string, lastName: string): StudentClassInterface;
 }
 
 interface StudentClassInterface {
