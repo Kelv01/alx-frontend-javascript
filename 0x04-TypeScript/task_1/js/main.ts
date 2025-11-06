@@ -72,7 +72,7 @@ class StudentClass implements StudentClassInterface {
     this.lastName = lastName;
   }
   workOnHomework(): string {
-    return "currently working"
+    return "Currently working"
   }
   displayName(): string {
     return this.firstName
