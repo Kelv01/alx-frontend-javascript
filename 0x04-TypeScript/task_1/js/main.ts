@@ -55,39 +55,15 @@ function printTeacher({
   return `${firstName}. ${lastName}`;
 }
 
-// interface StudentConstructor {
-//   new (firstName: string, lastName: string): StudentClassInterface;
-// }
-
-// interface StudentClassInterface {
-//   workOnHomework(): string;
-//   displayName(): string;
-// }
-// class StudentClass implements StudentClassInterface {
-//   firstName: string;
-//   lastName: string;
-
-//   constructor(firstName: string, lastName: string) {
-//     this.firstName = firstName;
-//     this.lastName = lastName;
-//   }
-//   workOnHomework(): string {
-//     return "Currently working"
-//   }
-//   displayName(): string {
-//     return this.firstName
-//   }
-// }
 interface StudentConstructor {
-  new (firstName: string, lastName: string): StudentClassInterface;
+  new (firstName: string, lastName: string): StudentClass;
 }
 
-interface StudentClassInterface {
+interface StudentClass {
   workOnHomework(): string;
   displayName(): string;
 }
-
-class StudentClass implements StudentClassInterface {
+class StudentClass {
   firstName: string;
   lastName: string;
 
@@ -95,12 +71,10 @@ class StudentClass implements StudentClassInterface {
     this.firstName = firstName;
     this.lastName = lastName;
   }
-
   workOnHomework(): string {
-    return "Currently working";
+    return "Currently working"
   }
-
   displayName(): string {
-    return this.firstName;
+    return this.firstName
   }
 }
