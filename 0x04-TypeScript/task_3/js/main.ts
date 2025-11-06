@@ -1,3 +1,5 @@
+// The triple-slash directive is no longer needed
+// <reference path="crud.d.ts" />
 
 // Import the types
 import { RowID, RowElement } from './interface';

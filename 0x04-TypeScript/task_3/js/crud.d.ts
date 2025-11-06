@@ -1,9 +1,7 @@
-// Import the types from interface.ts
+// This is the *correct* way to type an ES module
 import { RowID, RowElement } from './interface';
-
-// Declare the types for the functions in crud.js
-declare module 'crud.js' {
-  export function insertRow(row: RowElement): RowID;
+declare module './crud.js' {
+  export function insertRow(row: RowElement): number; // Using number from hint
   export function deleteRow(rowId: RowID): void;
   export function updateRow(rowId: RowID, row: RowElement): RowID;
 }
