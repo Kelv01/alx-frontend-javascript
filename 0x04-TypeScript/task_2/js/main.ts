@@ -55,18 +55,34 @@ function createEmployee(salary: number | string): Director | Teacher {
   }
 }
 
-function isDirector(employee: Director | Teacher): employee is Director {
+export function isDirector(employee: Director | Teacher): employee is Director {
   
   return(employee as Director).workDirectorTasks !== undefined
 }
 
-function executeWork(employee: Director | Teacher): void {
-  let result: string
-
+function executeWork(employee: Director | Teacher): string {
+  
   if (isDirector(employee)) {
-    result = employee.workDirectorTasks()
+    return employee.workDirectorTasks()
   } else {
-    result = employee.workTeacherTasks()
+    return employee.workTeacherTasks()
   }
-  console.log(result)
+  
 }
+
+type Subjects = 'Math' | 'History'
+
+
+function teachClass(todayClass: Subjects): string {
+  if (todayClass === 'Math') {
+    return 'Teaching Math'
+  }
+
+  return 'Teaching History'
+}
+
+console.log('\n --- teachClass(Math) ---')
+console.log(teachClass('Math'))
+
+console.log('\n--- teachClass(History) ---');
+console.log(teachClass('History'));
