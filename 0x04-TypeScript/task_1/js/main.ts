@@ -33,13 +33,7 @@ const director1: Director = {
 };
 console.log(director1);
 
-// interface printTeacherFunction {
-//   ({firstName, lastName}: Teacher): string;
-// }
 
-// const printTeacher: printTeacherFunction = ({firstName, lastName}) => {
-//   return `${firstName.charAt(0)}. ${lastName}`;
-// }
 
 interface printTeacherFunction {
   (firstName: string, lastName: string): string;
@@ -72,9 +66,10 @@ class StudentClass {
     this.lastName = lastName;
   }
   workOnHomework(): string {
-    return "Currently working"
+    return "Currently working";
   }
   displayName(): string {
-    return this.firstName
+    return this.firstName;
   }
 }
+
